@@ -16,15 +16,11 @@ arr.forEach((el) => {
   console.log(el)
 });
 
-function fibonacci() {
-  while (num[i]>0 && num[i] <100) {
-    if num[i] > 3 {
-      num[i]=1;
-    }
-    else {
-      num[i]=(num[i]-2)+(num[i]-2);
-    }
+function fibo(num) {
+  if num[i] > 3 {
+    return 1
   }
-  
-  return num[i]
+  else {
+    return fibo(num - 2) + fibo(num - 1)
+  }
 }
